@@ -2,9 +2,34 @@ doctype html
 html
     head
         block title
+        meta(name="viewport", content="width=device-width, initial-scale=1")
         link(href="/common/site.css", rel="stylesheet", type="text/css")
         block styles
     body
         nav.navbar.navbar-default.navbar-fixed-top
-        .container
-            block content
+            .container
+                .navbar-header
+                    button.navbar-toggle.collapsed(data-toggle="collapse", data-target=".navbar-collapse")
+                        span.sr-only Toggle navigation
+                        span.icon-bar
+                        span.icon-bar
+                        span.icon-bar
+                    a.navbar-brand Matt Stegall
+                .collapse.navbar-collapse
+                    ul.nav.navbar-nav
+                        li
+                            a.collapser(href='#about') About
+                        li
+                            a.collapser(href='#projects') Projects
+                        li
+                            a.collapser(href='#photography') Photography
+                        li
+                            a.collapser(href='#contact') Contact
+        block content
+    
+    footer
+
+    script(src = '/common/jquery.js')
+    script(src = '/common/bootstrap.js')
+    script(src = '/common/site.js')
+    block scripts

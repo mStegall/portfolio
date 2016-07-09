@@ -1,9 +1,76 @@
 extends ./layout.pug
 
 block title
-    title Express Boilerplate
+    title Matt Stegall
+
+block scripts
+    script(type='text/javascript', src='assets/unitegallery/js/unitegallery.min.js')
+    link(rel='stylesheet', href='assets/unitegallery/css/unite-gallery.css' type='text/css')
+    script(type="text/javascript", src="assets/unitegallery/themes/tiles/ug-theme-tiles.js")
+    script.
+        $(document).ready(function(){
+            $("#gallery").unitegallery({
+                tiles_type:"justified"
+            });
+        });
 
 block content
-    .row
-        .col-xs-12
-            h1 Express Boilerplate
+    .mainJumbo
+        .container
+            h1 Matt Stegall
+            h3 Web Developer
+    .container
+        section#about
+            .row
+                .col-xs-12                
+                    p.lead My dad sat me in front of a touchscreen computer when I was 3 and I have been tinkering ever since. I started learning web developement so I could create an app I had an idea for and I've loved every second of it since.  I have been learning through many online resources like FreeCodeCamp and PluralSight.  Recently I've been enjoying building mobile friendly, responsive, web apps with AngularJS while learning the current JavaScript ecosystem. 
+            .row
+                .col-xs-12
+                    img.img-responsive.img-circle.selfie(src='/home/selfie.jpg')
+        section#projects
+            .row
+                .col-xs-12
+                    h1.text-center Projects
+            .row
+                .col-sm-6
+                    h3 Quote Machine
+                    p.lead Quote Machine is a FreeCodeCamp project.  The goal was to introduce using AJAX request to access an API.
+                .col-sm-6.projectimg
+                    img.img-responsive(src='/home/quoteMachineSmall.png') 
+            .row
+                .col-xs-12.col-sm-6.col-sm-push-6
+                    h3 socialMixr
+                    p.lead socialMixr is a personal project aimed at creating a platform for people to share their drink recipies and review each others
+                    p: b Tech Stack
+                    ul
+                        li MongoDB with Mongoose
+                        li Express
+                        li AngularJS
+                        li Node.js
+                        li Sass
+                        li Passport
+                .col-xs-12.col-sm-6.col-sm-pull-6.projectimg
+                    img.img-responsive(src='/home/socialmixr.png')       
+        section#photography
+            .row
+                .col-xs-12
+                    h1.text-center Photography
+                    #gallery
+                        <img src="thumbs\Zoo-7.jpg" alt="" data-image="images\Zoo-7.jpg">
+                        <img src="thumbs\Zoo-8.jpg" alt="" data-image="images\Zoo-8.jpg">
+                        <img src="thumbs\Zoo-10.jpg" alt="" data-image="images\Zoo-10.jpg">
+                        <img src="thumbs\Zoo-12.jpg" alt="" data-image="images\Zoo-12.jpg">
+                        <img src="thumbs\Zoo-16.jpg" alt="" data-image="images\Zoo-16.jpg">
+                        <img src="thumbs\Zoo-20.jpg" alt="" data-image="images\Zoo-20.jpg">
+                        <img src="thumbs\Zoo-21.jpg" alt="" data-image="images\Zoo-21.jpg">
+                        <img src="thumbs\Zoo-22.jpg" alt="" data-image="images\Zoo-22.jpg">
+                        <img src="thumbs\Zoo-29.jpg" alt="" data-image="images\Zoo-29.jpg">
+        section#contact
+            .row
+                .col-xs-12
+                    h1.text-center Contact
+                
+                
+            
+
+            

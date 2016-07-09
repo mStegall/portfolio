@@ -2,11 +2,106 @@
 @import 'bootstrap';
 @import 'bootswatch';
 
+$mainJumboHeight: 300px;
+
 body{
     padding-top: 50px;
-    background-color: lightslategrey;
 }
 
-.container {
-    background-color: white;
+
+.mainJumbo {
+    overflow: auto;
+    position: relative;
+
+    margin-bottom: 15px;
+
+    .container { 
+        height: $mainJumboHeight;
+        
+        padding-left: 100px;
+
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+
+
+        h1, h3{
+            color: white;
+        }   
+    }
+}
+
+.mainJumbo::before{
+    content:"";
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+
+    overflow: hidden;
+        
+    display: block;
+
+    background-image: url('/home/mainJumbo.jpg');
+    background-size: cover;
+    width: 100%;
+    height: $mainJumboHeight;
+    filter: grayscale(100%) brightness(70%) blur(2px);
+}
+
+.selfie {
+    width: 20%;
+    margin: 25px auto 50px;
+}
+
+footer {
+    height: 100px;
+    background-color: slategray;
+}
+
+section {
+    margin: 25px 0;
+}
+
+:target:before {
+  content:"";
+  display:block;
+  height:64px;
+  margin:-64px 0 0;
+}
+
+@media (min-width: 768px) {
+    #projects {
+        .col-sm-6.projectimg{
+            padding-left: 0;    
+        }
+        .col-sm-6.projectimg.col-sm-pull-6{
+            padding-right: 0;
+        }
+    }
+}
+
+// @media (min-width: 1650px) {
+//     #about {
+//         height: 1080px - 50px - 300px;
+//     }
+// }
+
+@media (max-width: 544px){
+    .selfie{
+        width: 30%;
+    }
+    .mainJumbo {
+        .container{
+            height: 200px;
+            padding-left: 0;
+            align-items: center;
+        }
+
+        &::before{
+            height: 200px;
+        }
+    }
+    
 }

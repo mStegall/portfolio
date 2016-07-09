@@ -13,7 +13,7 @@ var imagemin = require('gulp-imagemin');
 var imageminPngquant = require('imagemin-pngquant');
 
 var config = {
-    includePaths: ['./bower_components/bootstrap-sass/assets/stylesheets', './bower_components/bootswatch/flatly']
+    includePaths: ['./bower_components/bootstrap-sass/assets/stylesheets', './bower_components/bootswatch/paper']
 };
 
 var folders = {
@@ -65,7 +65,7 @@ gulp.task('img', function () {
 })
 
 gulp.task('assets', function () {
-    return gulp.src('./src/assets/**/*')
+    return gulp.src('./assets/**/*')
         .pipe(gulp.dest('./public/assets/'))
 })
 
@@ -75,10 +75,11 @@ gulp.task('clean', function () {
         .pipe(clean());
 })
 
+
 gulp.task('build', function () {
     runSequence(['clean', 'bower'],
         'assets',
-        ['pug', 'sass', 'js', 'img'])
+        ['pug', 'sass', 'js', 'img', 'assets'])
 })
 
 gulp.task('default', ['build'])
