@@ -14,7 +14,13 @@ $(document).ready(function () {
             url: '/contact',
             type: 'POST',
             contentType: 'application/json',
-            data: formData
+            data: formData,
+            success: function () {
+                alert("I'll get back to you soon!")
+            },
+            err: function () {
+                alert("Failed to send.")
+            }
         });
         return false;
     })
