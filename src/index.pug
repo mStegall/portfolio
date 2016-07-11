@@ -72,8 +72,19 @@ block content
             .row
                 .col-xs-12
                     h1.text-center Contact
-                
-                
-            
-
+                    form#contactForm
+                        .row
+                            .col-sm-6.form-group
+                                label(for="name").sr-only Name 
+                                input.form-control#name(name="name", type="text", placeholder="Name", required)
+                            .col-sm-6.form-group
+                                label(for="email").sr-only E-mail: 
+                                input.form-control#email(name="email", type="email", placeholder="E-mail", required)
+                        .row
+                            .col-xs-12
+                                label(for="message").sr-only Message
+                                textarea.form-control#message(name="message", rows='4', placeholder="Message", required)
+                        .row
+                            .col-xs-12.clearfix
+                                button.btn.btn-lg.btn-default.pull-right Send
             

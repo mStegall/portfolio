@@ -9,8 +9,10 @@
   "author": "Matthew Stegall",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.15.2",
     "compression": "^1.6.2",
     "express": "^4.13.4",
+    "mailgun-js": "^0.7.11",
     "morgan": "^1.7.0"
   },
   "devDependencies": {
