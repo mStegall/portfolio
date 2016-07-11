@@ -4,8 +4,6 @@ var mailgun = require('mailgun-js')({apiKey: api_key, domain: domain})
 
 console.log({apikey: api_key, domain:domain})
 
-var nodemailer = require('nodemailer')
-
 module.exports = function (app, config) {
 
     app.post('/contact', function (req, res) {
