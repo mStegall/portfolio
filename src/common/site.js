@@ -16,12 +16,19 @@ $(document).ready(function () {
             contentType: 'application/json',
             data: formData,
             success: function () {
-                alert("I'll get back to you soon!")
+                alert("I'll get back to you soon!");
+                clearForm();
             },
-            err: function () {
-                alert("Failed to send.")
+            error: function () {
+                alert("Failed to send.");
             }
         });
         return false;
     })
+
+    function clearForm () {
+        $('#name').val('');
+        $('#email').val('');
+        $('#message').val('');
+    }
 })
