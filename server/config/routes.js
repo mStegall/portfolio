@@ -6,6 +6,12 @@ module.exports = function (app, config) {
 
     app.post('/contact', function (req, res) {
         console.log(req.body);
+	const message = req.body.message;
+	
+	if ( message.length < 20 || message.indexOf(" ") === -1) {
+	    return res.sendStatus(404);
+	}
+	
         var email = {
             from: 'contact@matthewstegall.com',
             to: 'mstegall928@gmail.com',
