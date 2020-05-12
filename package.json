@@ -4,6 +4,7 @@
   "description": "A basic express server.",
   "main": "server.js",
   "scripts": {
+    "pug": "gulp pug",
     "start": "node server.js"
   },
   "author": "Matthew Stegall",
@@ -12,6 +13,7 @@
     "body-parser": "^1.15.2",
     "compression": "^1.6.2",
     "express": "^4.13.4",
+    "gulp-sass": "^4.1.0",
     "mailgun-js": "^0.7.11",
     "morgan": "^1.7.0"
   },
