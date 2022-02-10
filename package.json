@@ -27,7 +27,7 @@
     "gulp-pug": "^3.0.3",
     "gulp-uglify": "^1.5.4",
     "imagemin-pngquant": "^5.0.0",
-    "node-sass": "^4.13.0",
+    "node-sass": "^7.0.0",
     "nodemon": "^1.9.2",
     "pug": "^2.0.0-beta3",
     "rimraf": "^2.5.3",
